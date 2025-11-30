@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Duel } from './duel';
 import { DuelConfig } from './configs/duel.config';
+import { DuelAction } from './contexts/duel-context';
 
 @Injectable()
 export class DuelManager {
@@ -21,5 +22,13 @@ export class DuelManager {
     if (!duel) return null;
 
     return duel;
+  }
+
+  action(id: string, action: DuelAction) {
+    const duel = this.duels.get(id);
+
+    if (!duel) return null;
+
+    duel.dispatch(action);
   }
 }

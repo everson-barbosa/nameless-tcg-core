@@ -8,6 +8,8 @@ import { Turn } from './components/turn.component';
 import { Zone } from './components/zone.component';
 import { PlayerState } from './components/player-state.component';
 import { Owner } from './components/owner.component';
+import { BoardTurnAction } from './components/board-turn-action.component';
+import { CoordsOnBoard } from './components/coords-on-board.component';
 
 export type Entity = number;
 
@@ -21,6 +23,8 @@ export interface WorldComponents {
   turn: Map<Entity, Turn>;
   owner: Map<Entity, Owner>;
   playerState: Map<Entity, PlayerState>;
+  boardTurnAction: Map<Entity, BoardTurnAction>;
+  coordsOnBoard: Map<Entity, CoordsOnBoard>;
 }
 
 export interface WorldProps {
@@ -43,6 +47,8 @@ export class World {
       turn: new Map(),
       owner: new Map(),
       playerState: new Map(),
+      boardTurnAction: new Map(),
+      coordsOnBoard: new Map(),
     },
   };
 

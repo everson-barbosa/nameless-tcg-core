@@ -3,6 +3,7 @@ import { dispatch } from './state/dispatch';
 import { DuelAction, DuelContext } from './contexts/duel-context';
 import { StateMachine, stateMachine } from './state/state-machine';
 import { initializerContext } from './contexts/initializer-context';
+import { gotoNextPhase } from './contexts/go-to-next-phase';
 
 export class Duel {
   private state: StateMachine;
@@ -18,20 +19,7 @@ export class Duel {
   private init() {
     this.state[this.context.state].onEnter?.(this.context);
 
-    this.advance();
-  }
-
-  private advance() {
-    const current = this.state[this.context.state];
-    const next = current.next?.(this.context);
-
-    console.log({ current, next });
-
-    if (next) {
-      this.context.state = next;
-
-      this.state[next].onEnter?.(this.context);
-    }
+    gotoNextPhase(this.context);
   }
 
   dispatch(action: DuelAction) {

@@ -21,5 +21,7 @@ export class InitMockDuel implements OnModuleInit {
         },
       ],
     });
+
+    this.duelManager.action('1', 'DEPLOY_CARD_ON_BOARD');
   }
 }

@@ -1,6 +1,6 @@
 import { World } from '../world';
 
-export type DuelAction = 'SUMMON_TROOP_CARD';
+export type DuelAction = 'DEPLOY_CARD_ON_BOARD';
 
 interface Turn {
   index: number;
@@ -8,12 +8,7 @@ interface Turn {
   order: string[];
 }
 
-export type DuelState =
-  | 'SETUP'
-  | 'DRAW_PHASE'
-  | 'MAIN_PHASE'
-  | 'RESOLVING_STACK'
-  | 'END_DUEL';
+export type DuelState = 'SETUP' | 'DRAW_PHASE' | 'MAIN_PHASE' | 'END_DUEL';
 
 export interface DuelContext {
   world: World;
