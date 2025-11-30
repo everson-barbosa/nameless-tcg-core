@@ -1,9 +1,11 @@
 import { Module } from '@nestjs/common';
 import { EcsModule } from 'src/ecs/ecs.module';
-import { InitDuel } from './init-duel';
+import { DuelController } from './duel/duel.controller';
+import { InitMockDuel } from './duel/init-mock.duel';
 
 @Module({
   imports: [EcsModule],
-  providers: [InitDuel],
+  providers: [InitMockDuel],
+  controllers: [DuelController],
 })
 export class InfraModule {}

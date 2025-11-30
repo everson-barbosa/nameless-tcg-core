@@ -1,4 +1,4 @@
-import { CardInput } from 'src/ecs/inputs/card';
+import { CardInput } from 'src/ecs/configs/card-input';
 
 export const egyptDeck: CardInput[] = [
   // ===== Guardião da Esfinge (3x) =====
@@ -8,8 +8,13 @@ export const egyptDeck: CardInput[] = [
       title: 'Guardião da Esfinge',
       kind: 'TROOP',
     },
-    moviment: { speed: 0, directions: [], rotation: 0, mobility: 'SOLID' },
-    health: { value: 20 },
+    moviment: {
+      speed: 0,
+      directions: new Set([]),
+      rotation: 0,
+      mobility: 'SOLID',
+    },
+    health: 20,
     cardTags: { tags: ['Tanker', 'Pedra'] },
     attack: {
       title: 'Rugido da Esfinge',
@@ -27,8 +32,13 @@ export const egyptDeck: CardInput[] = [
       title: 'Guardião da Esfinge',
       kind: 'TROOP',
     },
-    moviment: { speed: 0, directions: [], rotation: 0, mobility: 'SOLID' },
-    health: { value: 20 },
+    moviment: {
+      speed: 0,
+      directions: new Set([]),
+      rotation: 0,
+      mobility: 'SOLID',
+    },
+    health: 20,
     cardTags: { tags: ['Tanker', 'Pedra'] },
     attack: {
       title: 'Rugido da Esfinge',
@@ -46,8 +56,13 @@ export const egyptDeck: CardInput[] = [
       title: 'Guardião da Esfinge',
       kind: 'TROOP',
     },
-    moviment: { speed: 0, directions: [], rotation: 0, mobility: 'SOLID' },
-    health: { value: 20 },
+    moviment: {
+      speed: 0,
+      directions: new Set([]),
+      rotation: 0,
+      mobility: 'SOLID',
+    },
+    health: 20,
     cardTags: { tags: ['Tanker', 'Pedra'] },
     attack: {
       title: 'Rugido da Esfinge',
@@ -69,11 +84,11 @@ export const egyptDeck: CardInput[] = [
     },
     moviment: {
       speed: 2,
-      directions: ['N', 'S', 'E', 'W'],
+      directions: new Set(['N', 'S', 'E', 'W']),
       rotation: 360,
       mobility: 'SOLID',
     },
-    health: { value: 8 },
+    health: 8,
     cardTags: { tags: ['Atirador'] },
     attack: {
       title: 'Flecha Sombria',
@@ -93,11 +108,11 @@ export const egyptDeck: CardInput[] = [
     },
     moviment: {
       speed: 2,
-      directions: ['N', 'S', 'E', 'W'],
+      directions: new Set(['N', 'S', 'E', 'W']),
       rotation: 360,
       mobility: 'SOLID',
     },
-    health: { value: 8 },
+    health: 8,
     cardTags: { tags: ['Atirador'] },
     attack: {
       title: 'Flecha Sombria',
@@ -117,11 +132,11 @@ export const egyptDeck: CardInput[] = [
     },
     moviment: {
       speed: 2,
-      directions: ['N', 'S', 'E', 'W'],
+      directions: new Set(['N', 'S', 'E', 'W']),
       rotation: 360,
       mobility: 'SOLID',
     },
-    health: { value: 8 },
+    health: 8,
     cardTags: { tags: ['Atirador'] },
     attack: {
       title: 'Flecha Sombria',
@@ -139,11 +154,11 @@ export const egyptDeck: CardInput[] = [
     cardBase: { id: 'scarab-1', title: 'Escaravelho Sagrado', kind: 'TROOP' },
     moviment: {
       speed: 3,
-      directions: ['N', 'S', 'E', 'W', 'NE', 'NW', 'SE', 'SW'],
+      directions: new Set(['N', 'S', 'E', 'W', 'NE', 'NW', 'SE', 'SW']),
       rotation: 360,
       mobility: 'GHOST',
     },
-    health: { value: 5 },
+    health: 5,
     cardTags: { tags: ['Místico', 'Inseto'] },
     attack: {
       title: 'Luz Reencarnada',
@@ -159,11 +174,11 @@ export const egyptDeck: CardInput[] = [
     cardBase: { id: 'scarab-2', title: 'Escaravelho Sagrado', kind: 'TROOP' },
     moviment: {
       speed: 3,
-      directions: ['N', 'S', 'E', 'W', 'NE', 'NW', 'SE', 'SW'],
+      directions: new Set(['N', 'S', 'E', 'W', 'NE', 'NW', 'SE', 'SW']),
       rotation: 360,
       mobility: 'GHOST',
     },
-    health: { value: 5 },
+    health: 5,
     cardTags: { tags: ['Místico', 'Inseto'] },
     attack: {
       title: 'Luz Reencarnada',
@@ -179,11 +194,11 @@ export const egyptDeck: CardInput[] = [
     cardBase: { id: 'scarab-3', title: 'Escaravelho Sagrado', kind: 'TROOP' },
     moviment: {
       speed: 3,
-      directions: ['N', 'S', 'E', 'W', 'NE', 'NW', 'SE', 'SW'],
+      directions: new Set(['N', 'S', 'E', 'W', 'NE', 'NW', 'SE', 'SW']),
       rotation: 360,
       mobility: 'GHOST',
     },
-    health: { value: 5 },
+    health: 5,
     cardTags: { tags: ['Místico', 'Inseto'] },
     attack: {
       title: 'Luz Reencarnada',
@@ -201,11 +216,11 @@ export const egyptDeck: CardInput[] = [
     cardBase: { id: 'nile-soldier-1', title: 'Soldado do Nilo', kind: 'TROOP' },
     moviment: {
       speed: 1,
-      directions: ['N', 'S', 'E', 'W'],
+      directions: new Set(['N', 'S', 'E', 'W']),
       rotation: 90,
       mobility: 'SOLID',
     },
-    health: { value: 12 },
+    health: 12,
     cardTags: { tags: ['Soldado'] },
     attack: {
       title: 'Golpe do Rio',
@@ -221,11 +236,11 @@ export const egyptDeck: CardInput[] = [
     cardBase: { id: 'nile-soldier-2', title: 'Soldado do Nilo', kind: 'TROOP' },
     moviment: {
       speed: 1,
-      directions: ['N', 'S', 'E', 'W'],
+      directions: new Set(['N', 'S', 'E', 'W']),
       rotation: 90,
       mobility: 'SOLID',
     },
-    health: { value: 12 },
+    health: 12,
     cardTags: { tags: ['Soldado'] },
     attack: {
       title: 'Golpe do Rio',
@@ -241,11 +256,11 @@ export const egyptDeck: CardInput[] = [
     cardBase: { id: 'nile-soldier-3', title: 'Soldado do Nilo', kind: 'TROOP' },
     moviment: {
       speed: 1,
-      directions: ['N', 'S', 'E', 'W'],
+      directions: new Set(['N', 'S', 'E', 'W']),
       rotation: 90,
       mobility: 'SOLID',
     },
-    health: { value: 12 },
+    health: 12,
     cardTags: { tags: ['Soldado'] },
     attack: {
       title: 'Golpe do Rio',
@@ -267,11 +282,11 @@ export const egyptDeck: CardInput[] = [
     },
     moviment: {
       speed: 1,
-      directions: ['N', 'S', 'E', 'W'],
+      directions: new Set(['N', 'S', 'E', 'W']),
       rotation: 360,
       mobility: 'SOLID',
     },
-    health: { value: 10 },
+    health: 10,
     cardTags: { tags: ['Místico'] },
     attack: {
       title: 'Cura Divina',
@@ -291,11 +306,11 @@ export const egyptDeck: CardInput[] = [
     },
     moviment: {
       speed: 1,
-      directions: ['N', 'S', 'E', 'W'],
+      directions: new Set(['N', 'S', 'E', 'W']),
       rotation: 360,
       mobility: 'SOLID',
     },
-    health: { value: 10 },
+    health: 10,
     cardTags: { tags: ['Místico'] },
     attack: {
       title: 'Cura Divina',
@@ -311,8 +326,13 @@ export const egyptDeck: CardInput[] = [
   // ===== Múmia Conjuradora (2x) =====
   {
     cardBase: { id: 'mummy-1', title: 'Múmia Conjuradora', kind: 'TROOP' },
-    moviment: { speed: 0, directions: [], rotation: 0, mobility: 'SOLID' },
-    health: { value: 15 },
+    moviment: {
+      speed: 0,
+      directions: new Set([]),
+      rotation: 0,
+      mobility: 'SOLID',
+    },
+    health: 15,
     cardTags: { tags: ['Morto-Vivo'] },
     attack: {
       title: 'Areia Amaldiçoada',
@@ -326,8 +346,13 @@ export const egyptDeck: CardInput[] = [
   },
   {
     cardBase: { id: 'mummy-2', title: 'Múmia Conjuradora', kind: 'TROOP' },
-    moviment: { speed: 0, directions: [], rotation: 0, mobility: 'SOLID' },
-    health: { value: 15 },
+    moviment: {
+      speed: 0,
+      directions: new Set([]),
+      rotation: 0,
+      mobility: 'SOLID',
+    },
+    health: 15,
     cardTags: { tags: ['Morto-Vivo'] },
     attack: {
       title: 'Areia Amaldiçoada',
@@ -349,11 +374,11 @@ export const egyptDeck: CardInput[] = [
     },
     moviment: {
       speed: 1,
-      directions: ['N', 'S'],
+      directions: new Set(['N', 'S']),
       rotation: 90,
       mobility: 'SOLID',
     },
-    health: { value: 14 },
+    health: 14,
     cardTags: { tags: ['Soldado'] },
     attack: {
       title: 'Investida Fúnebre',
@@ -373,11 +398,11 @@ export const egyptDeck: CardInput[] = [
     },
     moviment: {
       speed: 1,
-      directions: ['N', 'S'],
+      directions: new Set(['N', 'S']),
       rotation: 90,
       mobility: 'SOLID',
     },
-    health: { value: 14 },
+    health: 14,
     cardTags: { tags: ['Soldado'] },
     attack: {
       title: 'Investida Fúnebre',
@@ -395,11 +420,11 @@ export const egyptDeck: CardInput[] = [
     cardBase: { id: 'horus-hawk-1', title: 'Falcão de Hórus', kind: 'TROOP' },
     moviment: {
       speed: 3,
-      directions: ['N', 'S', 'E', 'W', 'NE', 'NW', 'SE', 'SW'],
+      directions: new Set(['N', 'S', 'E', 'W', 'NE', 'NW', 'SE', 'SW']),
       rotation: 720,
       mobility: 'JUMPER',
     },
-    health: { value: 6 },
+    health: 6,
     cardTags: { tags: ['Voador'] },
     attack: {
       title: 'Rasante Solar',
@@ -415,11 +440,11 @@ export const egyptDeck: CardInput[] = [
     cardBase: { id: 'horus-hawk-2', title: 'Falcão de Hórus', kind: 'TROOP' },
     moviment: {
       speed: 3,
-      directions: ['N', 'S', 'E', 'W', 'NE', 'NW', 'SE', 'SW'],
+      directions: new Set(['N', 'S', 'E', 'W', 'NE', 'NW', 'SE', 'SW']),
       rotation: 720,
       mobility: 'JUMPER',
     },
-    health: { value: 6 },
+    health: 6,
     cardTags: { tags: ['Voador'] },
     attack: {
       title: 'Rasante Solar',
@@ -441,11 +466,11 @@ export const egyptDeck: CardInput[] = [
     },
     moviment: {
       speed: 2,
-      directions: ['N', 'S', 'E', 'W'],
+      directions: new Set(['N', 'S', 'E', 'W']),
       rotation: 180,
       mobility: 'SOLID',
     },
-    health: { value: 7 },
+    health: 7,
     cardTags: { tags: ['Animal'] },
     attack: {
       title: 'Ferroada Venenosa',
@@ -465,11 +490,11 @@ export const egyptDeck: CardInput[] = [
     },
     moviment: {
       speed: 2,
-      directions: ['N', 'S', 'E', 'W'],
+      directions: new Set(['N', 'S', 'E', 'W']),
       rotation: 180,
       mobility: 'SOLID',
     },
-    health: { value: 7 },
+    health: 7,
     cardTags: { tags: ['Animal'] },
     attack: {
       title: 'Ferroada Venenosa',
@@ -489,8 +514,13 @@ export const egyptDeck: CardInput[] = [
       title: 'Colosso de Pedra',
       kind: 'TROOP',
     },
-    moviment: { speed: 0, directions: [], rotation: 0, mobility: 'SOLID' },
-    health: { value: 22 },
+    moviment: {
+      speed: 0,
+      directions: new Set([]),
+      rotation: 0,
+      mobility: 'SOLID',
+    },
+    health: 22,
     cardTags: { tags: ['Tanker', 'Pedra'] },
     attack: {
       title: 'Pisada Sísmica',
@@ -508,8 +538,13 @@ export const egyptDeck: CardInput[] = [
       title: 'Colosso de Pedra',
       kind: 'TROOP',
     },
-    moviment: { speed: 0, directions: [], rotation: 0, mobility: 'SOLID' },
-    health: { value: 22 },
+    moviment: {
+      speed: 0,
+      directions: new Set([]),
+      rotation: 0,
+      mobility: 'SOLID',
+    },
+    health: 22,
     cardTags: { tags: ['Tanker', 'Pedra'] },
     attack: {
       title: 'Pisada Sísmica',
@@ -527,11 +562,11 @@ export const egyptDeck: CardInput[] = [
     cardBase: { id: 'sobek-serpent-1', title: 'Cobra de Sobek', kind: 'TROOP' },
     moviment: {
       speed: 2,
-      directions: ['N', 'S', 'E', 'W'],
+      directions: new Set(['N', 'S', 'E', 'W']),
       rotation: 180,
       mobility: 'SOLID',
     },
-    health: { value: 9 },
+    health: 9,
     cardTags: { tags: ['Animal'] },
     attack: {
       title: 'Mordida do Pântano',
@@ -547,11 +582,11 @@ export const egyptDeck: CardInput[] = [
     cardBase: { id: 'sobek-serpent-2', title: 'Cobra de Sobek', kind: 'TROOP' },
     moviment: {
       speed: 2,
-      directions: ['N', 'S', 'E', 'W'],
+      directions: new Set(['N', 'S', 'E', 'W']),
       rotation: 180,
       mobility: 'SOLID',
     },
-    health: { value: 9 },
+    health: 9,
     cardTags: { tags: ['Animal'] },
     attack: {
       title: 'Mordida do Pântano',

@@ -1,5 +1,5 @@
 export type Direction = 'N' | 'S' | 'E' | 'W' | 'NE' | 'NW' | 'SE' | 'SW';
-export type Directions = Direction[];
+export type Directions = Set<Direction>;
 
 export type MobilityType = 'SOLID' | 'GHOST' | 'JUMPER';
 
@@ -42,10 +42,6 @@ interface Moviment {
   mobility: MobilityType;
 }
 
-interface Health {
-  value: number;
-}
-
 interface CardTags {
   tags: string[];
 }
@@ -63,7 +59,7 @@ interface Attack {
 export interface CardInput {
   cardBase: CardBase;
   moviment?: Moviment;
-  health?: Health;
+  health?: number;
   cardTags?: CardTags;
   attack?: Attack;
 }

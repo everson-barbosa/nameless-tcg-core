@@ -1,4 +1,4 @@
-import { Entity } from '../types/world';
+import { Entity } from '../world';
 
 export interface Turn {
   currentPlayer: Entity;
