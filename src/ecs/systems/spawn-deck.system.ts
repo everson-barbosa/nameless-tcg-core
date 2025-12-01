@@ -14,9 +14,9 @@ export function spawnDeck({ world, playerId }: SpawnDeckProps) {
 
   const cards = getCardsByPlayerId({ world, playerId });
 
-  world.components.zone.set(player.entity, {
+  world.components.zone.set(player, {
     type: 'DECK',
     playerId,
-    cards: cards.map((card) => card.entity),
+    cards,
   });
 }

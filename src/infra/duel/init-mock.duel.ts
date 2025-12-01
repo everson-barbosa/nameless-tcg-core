@@ -22,6 +22,17 @@ export class InitMockDuel implements OnModuleInit {
       ],
     });
 
-    this.duelManager.action('1', 'DEPLOY_CARD_ON_BOARD');
+    this.duelManager.action({
+      id: '1',
+      action: 'DEPLOY_CARD_ON_BOARD',
+      payload: {
+        playerId: '1',
+        card: 1,
+        position: {
+          x: 1,
+          y: 1,
+        },
+      },
+    });
   }
 }

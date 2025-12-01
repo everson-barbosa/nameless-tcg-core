@@ -4,7 +4,6 @@ import { CardBase } from './components/card-base.component';
 import { CardTags } from './components/card-tag.component';
 import { Health } from './components/health.component';
 import { Moviment } from './components/moviment.component';
-import { Turn } from './components/turn.component';
 import { Zone } from './components/zone.component';
 import { PlayerState } from './components/player-state.component';
 import { Owner } from './components/owner.component';
@@ -20,7 +19,6 @@ export interface WorldComponents {
   attack: Map<Entity, Attack>;
   moviment: Map<Entity, Moviment>;
   zone: Map<Entity, Zone>;
-  turn: Map<Entity, Turn>;
   owner: Map<Entity, Owner>;
   playerState: Map<Entity, PlayerState>;
   boardTurnAction: Map<Entity, BoardTurnAction>;
@@ -44,7 +42,6 @@ export class World {
       attack: new Map(),
       moviment: new Map(),
       zone: new Map(),
-      turn: new Map(),
       owner: new Map(),
       playerState: new Map(),
       boardTurnAction: new Map(),

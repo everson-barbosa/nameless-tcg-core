@@ -18,6 +18,6 @@ export interface DuelContext {
 
 export interface StateHandler {
   onEnter?: (ctx: DuelContext) => void;
-  onAction?: (ctx: DuelContext, action: DuelAction) => void;
+  onAction?: (ctx: DuelContext, action: DuelAction, payload: any) => void;
   next?: (ctx: DuelContext) => DuelState;
 }

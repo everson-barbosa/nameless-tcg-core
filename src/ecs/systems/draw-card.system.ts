@@ -11,15 +11,20 @@ export function drawCard({ world, playerId }: DrawCardProps) {
   const deck = getDeckByPlayerId({ world, playerId });
   const hand = getHandByPlayerId({ world, playerId });
 
-  if (!deck?.zone || !hand?.zone) return;
+  if (!deck || !hand) return;
 
-  const isDeckEmpty = deck.zone.cards.length === 0;
+  const deckZone = world.components.zone.get(deck);
+  const handZone = world.components.zone.get(deck);
+
+  if (!deckZone || !handZone) return;
+
+  const isDeckEmpty = deckZone.cards.length === 0;
 
   if (isDeckEmpty) return;
 
-  const card = deck.zone.cards.shift();
+  const card = deckZone.cards.shift();
 
   console.log({ world, card, playerId });
 
-  hand.zone.cards.push(card as number);
+  handZone.cards.push(card as number);
 }

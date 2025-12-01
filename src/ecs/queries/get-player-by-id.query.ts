@@ -8,7 +8,7 @@ interface GetPlayerByIdProps {
 export function getPlayerById({ world, playerId }: GetPlayerByIdProps) {
   for (const [entity, playerState] of world.components.playerState) {
     if (playerState.playerId === playerId) {
-      return { entity, playerState };
+      return entity;
     }
   }
 

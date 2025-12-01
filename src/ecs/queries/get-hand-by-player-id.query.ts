@@ -12,7 +12,7 @@ export function getHandByPlayerId({ world, playerId }: GetHandByPlayerIdProps) {
     if (!isHandZone) continue;
 
     if (zone.playerId === playerId) {
-      return { entity, zone };
+      return entity;
     }
   }
 

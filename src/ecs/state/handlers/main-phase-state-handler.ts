@@ -9,7 +9,7 @@ export const mainPhaseStateHandler: StateHandler = {
       playerId: getCurrentPlayerId(ctx),
     });
   },
-  onAction(ctx, action) {
-    console.log({ ctx, action });
+  onAction(ctx, action, payload) {
+    console.log({ ctx, action, payload });
   },
 };

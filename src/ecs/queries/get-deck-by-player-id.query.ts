@@ -12,7 +12,7 @@ export function getDeckByPlayerId({ world, playerId }: GetDeckByPlayerIdProps) {
     if (!isDeckZone) continue;
 
     if (zone.playerId === playerId) {
-      return { entity, zone };
+      return entity;
     }
   }
   return null;

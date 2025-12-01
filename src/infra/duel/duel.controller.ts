@@ -52,7 +52,7 @@ export class DuelController {
 
     if (!duel) throw new NotFoundException();
 
-    duel.dispatch(action);
+    duel.dispatch(action, { id: 1 });
 
     return duel.getState();
   }

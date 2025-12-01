@@ -1,4 +1,3 @@
-import { Owner } from '../components/owner.component';
 import { Entity, World } from '../world';
 
 interface GetCardsOnBoardByPlayerIdProps {
@@ -10,7 +9,7 @@ export function getCardsOnBoardByPlayerId({
   world,
   playerId,
 }: GetCardsOnBoardByPlayerIdProps) {
-  const result: Array<{ entity: Entity; owner: Owner }> = [];
+  const result: Entity[] = [];
 
   for (const [entity, owner] of world.components.owner) {
     const isPlayerCard = owner.playerId === playerId;
@@ -21,7 +20,7 @@ export function getCardsOnBoardByPlayerId({
 
     if (!world.components.coordsOnBoard.has(entity)) continue;
 
-    result.push({ entity, owner });
+    result.push(entity);
   }
 
   return result;

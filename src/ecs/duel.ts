@@ -22,8 +22,8 @@ export class Duel {
     gotoNextPhase(this.context);
   }
 
-  dispatch(action: DuelAction) {
-    dispatch(this.context, action);
+  dispatch(action: DuelAction, payload: any) {
+    dispatch({ ctx: this.context, action, payload });
   }
 
   getState() {
